@@ -6,50 +6,6 @@ instructionsRaw = f.read().split('\n')
 
 instructions = {}
 
-# def findValueForWire(key):
-# 	wire = instructions[key]
-# 	if 'value' in wire:
-# 		return wire['value']
-# 	elif wire['operation'] == '':
-# 		result = findValueForWire(wire['operand2'])
-# 		return result
-# 	elif wire['operation'] == 'AND':
-# 		if re.search('\\d+', wire['operand1']) and re.search('\\d+', wire['operand2']):
-# 			return numpy.uint16(wire['operand1']) & numpy.uint16(wire['operand2'])
-# 		elif re.search('\\d+', wire['operand1']):
-# 			result = findValueForWire(wire['operand2'])
-# 			return numpy.uint16(wire['operand1']) & result
-# 		elif re.search('\\d+', wire['operand2']):
-# 			return result & numpy.uint16(wire['operand2'])
-# 		else:
-# 			result1 = findValueForWire(wire['operand1'])
-# 			result2 = findValueForWire(wire['operand2'])
-# 			return result1 & result2
-# 	elif wire['operation'] == 'OR':
-# 		if re.search('\\d+', wire['operand1']) and re.search('\\d+', wire['operand2']):
-# 			return numpy.uint16(wire['operand1']) | numpy.uint16(wire['operand2'])
-# 		elif re.search('\\d+', wire['operand1']):
-# 			result = findValueForWire(wire['operand2'])
-# 			return numpy.uint16(wire['operand1']) | result
-# 		elif re.search('\\d+', wire['operand2']):
-# 			result = findValueForWire(wire['operand1'])
-# 			return result | numpy.uint16(wire['operand2'])
-# 		else:
-# 			result1 = findValueForWire(wire['operand1'])
-# 			result2 = findValueForWire(wire['operand2'])
-# 			return result1 | result2
-# 	elif wire['operation'] == 'LSHIFT':
-# 		result = findValueForWire(wire['operand1'])
-# 		return  result << numpy.uint16(wire['operand2'])
-# 	elif wire['operation'] == 'RSHIFT':
-# 		result = findValueForWire(wire['operand1'])
-# 		return result >> numpy.uint16(wire['operand2'])
-# 	elif wire['operation'] == 'NOT':
-# 		result = findValueForWire(wire['operand2'])
-# 		return ~result
-# 	else:
-# 		print()
-	
 def tryFindValue(inst):
 	if 'value' in inst:
 		return
