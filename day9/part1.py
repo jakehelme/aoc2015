@@ -30,4 +30,5 @@ for x in list(perms):
 		tot += destinations[x[y]][x[y+1]]
 	tots.append(tot)
 		
-print(min(tots))
+# print(min(tots))
+print(max(tots))
