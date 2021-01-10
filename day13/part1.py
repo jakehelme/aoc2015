@@ -14,7 +14,7 @@ for x in data:
 
     guests[matches[0][0]][matches[0][3]] = int(
         matches[0][2]) if matches[0][1] == 'gain' else -1 * int(matches[0][2])
-    print()
+
 
 combos = list(permutations(guests.keys()))
 
